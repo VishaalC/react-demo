@@ -4,37 +4,19 @@ import { FilteredSearch } from './components/FilteredSearch/FilteredSearch'
 
 function App() {
   const [option, setOption] = useState()
-
+  const optionValues = [
+    'getRevenueByBrand',
+    'findPopularProductsByBrand',
+    'maxPriceProduct',
+    'popularSizesPerBrand',
+  ]
   return (
     <>
-      <button
-        onClick={() => {
-          setOption('getRevenueByBrand')
-        }}
-      >
-        <p>Click to get revenue by brand</p>
-      </button>
-      <button
-        onClick={() => {
-          setOption('findPopularProductsByBrand')
-        }}
-      >
-        <p>Click to get popular products by brand</p>
-      </button>
-      <button
-        onClick={() => {
-          setOption('maxPriceProduct')
-        }}
-      >
-        <p>Click to get max price of product by brand</p>
-      </button>
-      <button
-        onClick={() => {
-          setOption('popularSizesPerBrand')
-        }}
-      >
-        <p>Click to get popular sizes per brand</p>
-      </button>
+      {optionValues.map((buttonValue, idx) => (
+        <button onClick={() => setOption(buttonValue)} key={idx}>
+          {buttonValue}
+        </button>
+      ))}
 
       <FilteredSearch
         text={'Search By Color and Gender [Comma Separated]'}
