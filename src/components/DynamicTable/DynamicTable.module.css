@@ -1,0 +1,15 @@
+.table {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+.tableHeaders {
+  border: 1px solid;
+  text-align: left;
+  padding: 1rem;
+}
+
+.tableData {
+  border: 1px solid;
+  padding: 1rem;
+}
